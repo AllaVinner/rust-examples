@@ -1,9 +1,11 @@
-use clap::{command, Subcommand};
+use clap::Subcommand;
 
 #[derive(Subcommand, Debug)]
 pub enum BasicCommands {
+    /// Say hi to someone
     Hello {
-        #[arg(long)]
+        /// How do you want to say hi to?
+        #[arg(short, long)]
         name: String,
     },
 }
